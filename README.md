@@ -1,10 +1,10 @@
 # [ZeroTier Pylon](https://github.com/zerotier/pylon) собранный статически
 С помощью [gost](https://github.com/go-gost/gost), например,  можно пробросить порт<br />
   на сервере:<br />
-  `pylon refract <net_id> --listen-addr 0.0.0.0 --listen-port 1111`
+  `pylon refract <net_id> --listen-addr 0.0.0.0 --listen-port 21111`
   
   в клиенте:<br />
-  `gost -L='tcp://127.0.0.1:8080/127.0.0.1:80' -F='socks5://<ваша сеть>:1111'`
+  `gost -L='tcp://127.0.0.1:8080/127.0.0.1:80' -F='socks5://<ваша сеть>:21111'`
 <br /><br />
 И не забывайте - `While a single Pylon instance will work for multiple networks and multiple applications simultaneously it will perform better if a new instance is started for each proxied network. The underlying libzt isn't multithreaded so it is recommended that you also split your proxied traffic across multiple instances if you notice performance bottlecks.` 
 
